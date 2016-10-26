@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.drag.viewdraghelperdemo.VDHLinearLayout2 xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/dragView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:clickable="true"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:text="我可以被拖拽"/>
+    <TextView
+        android:id="@+id/edgeDragView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:text="我只能从左侧\n边缘被拖拽"/>
+    <TextView
+        android:id="@+id/autoBackView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:text="释放之后回\n到开始位置"/>
+</android.drag.viewdraghelperdemo.VDHLinearLayout2>

@@ -8,6 +8,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // 底部菜抽屉示例
         setContentView(R.layout.activity_main);
+        // 其他用法
+//        setContentView(R.layout.activity_main2);
     }
 }

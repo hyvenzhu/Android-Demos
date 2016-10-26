@@ -14,29 +14,29 @@ import android.widget.ScrollView;
  * @version [ViewDragHelperDemo, 16/10/25 15:23]
  */
 
-public class VDHLinearLatout extends LinearLayout {
+public class VDHLinearLayout extends LinearLayout {
     ScrollView topView;
     Button dragBtn;
     ScrollView bottomView;
 
     int dragBtnHeight;
 
-    public VDHLinearLatout(Context context) {
+    public VDHLinearLayout(Context context) {
         super(context);
         init();
     }
 
-    public VDHLinearLatout(Context context, AttributeSet attrs) {
+    public VDHLinearLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public VDHLinearLatout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public VDHLinearLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
 
-    public VDHLinearLatout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public VDHLinearLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init();
     }
@@ -110,10 +110,5 @@ public class VDHLinearLatout extends LinearLayout {
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
         dragBtnHeight = dragBtn.getMeasuredHeight();
-    }
-
-    @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 }
