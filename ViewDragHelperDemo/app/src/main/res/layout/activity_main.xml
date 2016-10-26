@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.drag.viewdraghelperdemo.VDHLinearLatout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ScrollView
+        android:id="@+id/topView"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:text="@string/desc"/>
+    </ScrollView>
+    <Button
+        android:id="@+id/dragBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:text="拖拽"/>
+    <ScrollView
+        android:id="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="0dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:text="@string/desc2"/>
+    </ScrollView>
+</android.drag.viewdraghelperdemo.VDHLinearLatout>
