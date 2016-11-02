@@ -44,8 +44,7 @@ public class MainActivity extends AppCompatActivity {
     // 7.0系统拍照
     public void takePhotoNew(View v)
     {
-        //PermissionsActivity.actionStartForResult(this, 99, "拍照", new String[]{Manifest.permission.CAMERA} );
-        realNewTake();
+        PermissionsActivity.actionStartForResult(this, 99, "拍照", new String[]{Manifest.permission.CAMERA} );
     }
 
     void realNewTake()
