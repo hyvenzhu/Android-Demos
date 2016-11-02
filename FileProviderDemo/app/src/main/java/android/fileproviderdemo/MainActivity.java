@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         PermissionsActivity.actionStartForResult(this, 98, "拍照", new String[]{Manifest.permission.CAMERA} );
     }
 
-    void readOldTake()
+    void realOldTake()
     {
         String cachePath = getApplicationContext().getExternalCacheDir().getPath();
         picFile = new File(cachePath, "test.jpg");
@@ -44,10 +44,11 @@ public class MainActivity extends AppCompatActivity {
     // 7.0系统拍照
     public void takePhotoNew(View v)
     {
-        PermissionsActivity.actionStartForResult(this, 99, "拍照", new String[]{Manifest.permission.CAMERA} );
+        //PermissionsActivity.actionStartForResult(this, 99, "拍照", new String[]{Manifest.permission.CAMERA} );
+        realNewTake();
     }
 
-    void readNewTake()
+    void realNewTake()
     {
         // 重新构造Uri：content://
         File imagePath = new File(getApplicationContext().getExternalCacheDir(), "images");
@@ -74,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
             case 98:
                 if (resultCode == PermissionsActivity.PERMISSIONS_GRANTED)
                 {
-                    readOldTake();
+                    realOldTake();
                     Log.d("ActivityDemo3", "权限申请成功");
                 }
                 else
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             case 99:
                 if (resultCode == PermissionsActivity.PERMISSIONS_GRANTED)
                 {
-                    readNewTake();
+                    realNewTake();
                     Log.d("ActivityDemo3", "权限申请成功");
                 }
                 else
