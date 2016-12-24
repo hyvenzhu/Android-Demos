@@ -8,7 +8,7 @@ public class MyClass {
     public static void main(String[] args)
     {
         final IHello hello = new HelloImpl();
-        IHello helloProxy = (IHello)Proxy.newProxyInstance(hello.getClass().getClassLoader(), hello.getClass().getInterfaces(), new InvocationHandler() {
+        IHello helloProxy = (IHello) Proxy.newProxyInstance(hello.getClass().getClassLoader(), hello.getClass().getInterfaces(), new InvocationHandler() {
             @Override
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                 System.out.println("do before");
