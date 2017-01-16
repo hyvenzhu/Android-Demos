@@ -19,13 +19,12 @@ public class PermissonAspect {
 
     @Around("methodAnnotatedWithMPermisson(permisson)")
     public void checkPermisson(final ProceedingJoinPoint joinPoint, MPermisson permisson) throws Throwable {
-        // 4.4（包含）无法拿到注解的值，permisson == null，不知道为何？？
-//        String permissonStr = permisson.value();
+        String permissonStr = permisson.value();
 
         // 一般使用栈顶Activity作为上下文
         MainActivity mainActivity = (MainActivity) joinPoint.getThis();
         new AlertDialog.Builder(mainActivity).setTitle("提示")
-                .setMessage("申请相机权限")
+                .setMessage(permissonStr)
                 .setNegativeButton("取消", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -42,7 +41,6 @@ public class PermissonAspect {
                         }
 
                     }
-                })
-                .create().show();
+                }).create().show();
     }
 }

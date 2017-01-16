@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
  * @author hiphonezhu@gmail.com
  * @version [AspectJDemo, 17/1/12 14:15]
  */
-@Retention(RetentionPolicy.CLASS)
+@Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface MPermisson {
     String value();
