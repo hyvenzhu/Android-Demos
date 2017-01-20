@@ -15,6 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".method.MethodActivity"/>
+        <activity android:name=".constructor.ConstructorActivity"/>
+        <activity android:name=".field.FieldActivity"/>
     </application>
 
 </manifest>
