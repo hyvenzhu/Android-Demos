@@ -27,6 +27,8 @@ public class MethodActivity extends AppCompatActivity {
         height = animal.getHeight(1);
 
         animal.hurt();
-        animal.hurtThrows();
+        try {
+            animal.hurtThrows();
+        } catch (Exception e) {}
     }
 }

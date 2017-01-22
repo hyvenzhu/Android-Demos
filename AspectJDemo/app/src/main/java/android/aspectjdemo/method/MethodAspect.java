@@ -18,44 +18,18 @@ import org.aspectj.lang.annotation.Pointcut;
  */
 @Aspect
 public class MethodAspect {
-    private static final String TAG = "ConstructorAspect";
+    private static final String TAG = "MethodAspect";
 
     @Pointcut("call(* android.aspectjdemo.animal.Animal.fly(..))")
     public void callMethod() {}
 
-    @Before("callMethod()")
-    public void beforeMethodCall(JoinPoint joinPoint) {
-        Log.e(TAG, "before->" + joinPoint.getTarget().toString() + "#" + joinPoint.getSignature().getName());
-    }
-
-    @After("callMethod()")
-    public void afterMethodCall(JoinPoint joinPoint) {
-        Log.e(TAG, "after->" + joinPoint.getTarget().toString() + "#" + joinPoint.getSignature().getName());
-    }
-
-    /**
-     * 不能和Before、After一起使用
-     * @param joinPoint
-     * @throws Throwable
-     */
-//    @Around("callMethod()")
-//    public void aroundMethodCall(ProceedingJoinPoint joinPoint) throws Throwable {
-//        Log.e(TAG, "around->" + joinPoint.getTarget().toString() + "#" + joinPoint.getSignature().getName());
-//
-//        // 执行原代码
-//        joinPoint.proceed();
-//    }
-
-    @Pointcut("execution(* android.aspectjdemo.animal.Animal.fly(..))")
-    public void executionMethod() {}
-
-//    @Before("executionMethod()")
-//    public void beforeMethodExecution(JoinPoint joinPoint) {
+//    @Before("callMethod()")
+//    public void beforeMethodCall(JoinPoint joinPoint) {
 //        Log.e(TAG, "before->" + joinPoint.getTarget().toString() + "#" + joinPoint.getSignature().getName());
 //    }
-//
-//    @After("executionMethod()")
-//    public void afterMethodExecution(JoinPoint joinPoint) {
+
+//    @After("callMethod()")
+//    public void afterMethodCall(JoinPoint joinPoint) {
 //        Log.e(TAG, "after->" + joinPoint.getTarget().toString() + "#" + joinPoint.getSignature().getName());
 //    }
 
@@ -64,13 +38,39 @@ public class MethodAspect {
      * @param joinPoint
      * @throws Throwable
      */
-    @Around("executionMethod()")
-    public void aroundMethodExecution(ProceedingJoinPoint joinPoint) throws Throwable {
+    @Around("callMethod()")
+    public void aroundMethodCall(ProceedingJoinPoint joinPoint) throws Throwable {
         Log.e(TAG, "around->" + joinPoint.getTarget().toString() + "#" + joinPoint.getSignature().getName());
 
         // 执行原代码
-//        joinPoint.proceed();
+        joinPoint.proceed();
     }
+
+    @Pointcut("execution(* android.aspectjdemo.animal.Animal.fly(..))")
+    public void executionMethod() {}
+
+    @Before("executionMethod()")
+    public void beforeMethodExecution(JoinPoint joinPoint) {
+        Log.e(TAG, "before->" + joinPoint.getTarget().toString() + "#" + joinPoint.getSignature().getName());
+    }
+
+//    @After("executionMethod()")
+//    public void afterMethodExecution(JoinPoint joinPoint) {
+//        Log.e(TAG, "after->" + joinPoint.getTarget().toString() + "#" + joinPoint.getSignature().getName());
+//    }
+
+//    /**
+//     * 不能和Before、After一起使用
+//     * @param joinPoint
+//     * @throws Throwable
+//     */
+//    @Around("executionMethod()")
+//    public void aroundMethodExecution(ProceedingJoinPoint joinPoint) throws Throwable {
+//        Log.e(TAG, "around->" + joinPoint.getTarget().toString() + "#" + joinPoint.getSignature().getName());
+//
+//        // 执行原代码
+////        joinPoint.proceed();
+//    }
 
     /**
      * 替换原方法返回值
@@ -101,8 +101,8 @@ public class MethodAspect {
      * @AfterThrowing
      * @param throwable
      */
-    @AfterThrowing(pointcut = "call(* android.aspectjdemo.animal.Animal.hurtThrows(..))", throwing = "throwable")
-    public void hurtThrows(Throwable throwable) {
+    @AfterThrowing(pointcut = "call(* *..*(..))", throwing = "throwable")
+    public void anyFuncThrows(Throwable throwable) {
         Log.e(TAG, "hurtThrows: ", throwable);
     }
 
@@ -110,7 +110,7 @@ public class MethodAspect {
      * @AfterReturning
      * @param height
      */
-    @AfterReturning(pointcut = "call(* android.aspectjdemo.animal.Animal.getHeight(..)) && args(int)", returning = "height")
+    @AfterReturning(pointcut = "execution(* android.aspectjdemo.animal.Animal.getHeight(..)) && args(int)", returning = "height")
     public void getHeight(int height) {
         Log.d(TAG, "getHeight: " + height);
     }

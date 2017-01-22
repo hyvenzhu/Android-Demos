@@ -26,10 +26,10 @@ public class StaticInitializationAspect {
         Log.d(TAG, "beforeStaticBlock: ");
     }
 
-    @After("staticBlock()")
-    public void afterStaticBlock(JoinPoint joinPoint) {
-        Log.d(TAG, "afterStaticBlock: ");
-    }
+//    @After("staticBlock()")
+//    public void afterStaticBlock(JoinPoint joinPoint) {
+//        Log.d(TAG, "afterStaticBlock: ");
+//    }
 
 //    /**
 //     * @param joinPoint

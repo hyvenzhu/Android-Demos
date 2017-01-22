@@ -47,7 +47,7 @@ public class Animal {
         }
     }
 
-    public void hurtThrows() throws ArithmeticException{
+    public void hurtThrows(){
         int i = 4 / 0;
     }
 

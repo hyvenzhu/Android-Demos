@@ -20,7 +20,7 @@ public class FieldActivity extends AppCompatActivity {
         Animal animal = new Animal();
 
         int age = animal.getAge();
-        Log.e(TAG, "age: " + age);
+        Log.e(TAG, "true age: " + age);
         animal.setAge(11);
         age = animal.getAge();
         Log.e(TAG, "age: " + age);

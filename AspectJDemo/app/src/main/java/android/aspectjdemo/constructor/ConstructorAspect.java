@@ -57,16 +57,16 @@ public class ConstructorAspect {
 //        Log.e(TAG, "after->" + joinPoint.getThis().toString() + "#" + joinPoint.getSignature().getName());
 //    }
 
-    /**
-     * 不能和Before、After一起使用
-     * @param joinPoint
-     * @throws Throwable
-     */
-    @Around("executionConstructor()")
-    public void aroundConstructorExecution(ProceedingJoinPoint joinPoint) throws Throwable {
-        Log.e(TAG, "around->" + joinPoint.getThis().toString() + "#" + joinPoint.getSignature().getName());
-
-        // 执行原代码
-        joinPoint.proceed();
-    }
+//    /**
+//     * 不能和Before、After一起使用
+//     * @param joinPoint
+//     * @throws Throwable
+//     */
+//    @Around("executionConstructor()")
+//    public void aroundConstructorExecution(ProceedingJoinPoint joinPoint) throws Throwable {
+//        Log.e(TAG, "around->" + joinPoint.getThis().toString() + "#" + joinPoint.getSignature().getName());
+//
+//        // 执行原代码
+//        joinPoint.proceed();
+//    }
 }

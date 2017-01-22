@@ -41,9 +41,7 @@ public class FieldAspect {
 //        Object obj = joinPoint.proceed();
 //        int age = Integer.parseInt(obj.toString());
 //        Log.e(TAG, "age: " + age);
-//
-//        Log.e(TAG, "around->" + joinPoint.getTarget().toString() + "#" + joinPoint.getSignature().getName());
-//        return 1000;
+//        return 100;
 //    }
 
     /**
@@ -70,18 +68,18 @@ public class FieldAspect {
      */
     @Around("fieldSet()")
     public void aroundFieldSet(ProceedingJoinPoint joinPoint) throws Throwable {
-        Log.e(TAG, "around->" + joinPoint.getTarget().toString() + "#" + joinPoint.getSignature().getName());
+//        Log.e(TAG, "around->" + joinPoint.getTarget().toString() + "#" + joinPoint.getSignature().getName());
 
         // 执行原代码
 //        joinPoint.proceed();
     }
-
-    /**
-     * 测试target
-     * @param joinPoint
-     */
-    @Before("call(* *..targetFunc(..)) && target(android.aspectjdemo.animal.Animal)")
-    public void target(JoinPoint joinPoint) {
-        Log.d(TAG, "target: " + joinPoint.getTarget().toString());
-    }
+//
+//    /**
+//     * 测试target
+//     * @param joinPoint
+//     */
+//    @Before("call(* *..targetFunc(..)) && target(android.aspectjdemo.animal.Animal)")
+//    public void target(JoinPoint joinPoint) {
+//        Log.d(TAG, "target: " + joinPoint.getTarget().toString());
+//    }
 }
