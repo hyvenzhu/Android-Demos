@@ -29,4 +29,10 @@
         android:layout_height="wrap_content"
         android:text="Field"
         android:onClick="onViewClick"/>
+    <Button
+        android:id="@+id/camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="camera"
+        android:onClick="onViewClick"/>
 </LinearLayout>

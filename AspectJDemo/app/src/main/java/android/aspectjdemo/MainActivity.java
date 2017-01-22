@@ -32,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.field:
                 startActivity(new Intent(this, FieldActivity.class));
                 break;
+            case R.id.camera:
+                camera();
+                break;
         }
     }
 
