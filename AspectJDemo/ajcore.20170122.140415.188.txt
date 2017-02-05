@@ -154,7 +154,7 @@ java.specification.version=1.8
 info Pipelining compilation
 info weaver operating in reweavable mode.  Need to verify any required types exist.
 info processing reweavable type android.aspectjdemo.MainActivity: android/aspectjdemo/MainActivity.java
-info successfully verified type android.aspectjdemo.PermissonAspect exists.  Originates from android/aspectjdemo/PermissonAspect.java
+info successfully verified type android.aspectjdemo.PermissionAspect exists.  Originates from android/aspectjdemo/PermissonAspect.java
 info processing reweavable type android.aspectjdemo.others.AdviceExecutionAspect: android/aspectjdemo/others/AdviceExecutionAspect.java
 info successfully verified type android.aspectjdemo.others.AdviceExecutionAspect exists.  Originates from android/aspectjdemo/others/AdviceExecutionAspect.java
 info processing reweavable type android.aspectjdemo.constructor.ConstructorAspect: android/aspectjdemo/constructor/ConstructorAspect.java
@@ -171,8 +171,8 @@ info successfully verified type android.aspectjdemo.method.MethodAspect exists. 
 info processing reweavable type android.aspectjdemo.method.MethodAspect: android/aspectjdemo/method/MethodAspect.java
 info successfully verified type android.aspectjdemo.others.AdviceExecutionAspect exists.  Originates from android/aspectjdemo/others/AdviceExecutionAspect.java
 info successfully verified type android.aspectjdemo.method.MethodAspect exists.  Originates from android/aspectjdemo/method/MethodAspect.java
-info processing reweavable type android.aspectjdemo.PermissonAspect: android/aspectjdemo/PermissonAspect.java
-info successfully verified type android.aspectjdemo.PermissonAspect exists.  Originates from android/aspectjdemo/PermissonAspect.java
+info processing reweavable type android.aspectjdemo.PermissionAspect: android/aspectjdemo/PermissonAspect.java
+info successfully verified type android.aspectjdemo.PermissionAspect exists.  Originates from android/aspectjdemo/PermissonAspect.java
 info successfully verified type android.aspectjdemo.others.AdviceExecutionAspect exists.  Originates from android/aspectjdemo/others/AdviceExecutionAspect.java
 warning at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 around on initialization not supported (compiler limitation)
 warning at android/aspectjdemo/field/FieldAspect.java:18::0 around on initialization not supported (compiler limitation)
@@ -415,8 +415,8 @@ warning at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/ap
 warning at android/aspectjdemo/PermissonAspect.java:16::0 around on initialization not supported (compiler limitation)
 warning at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 around on pre-initialization not supported (compiler limitation)
 warning at android/aspectjdemo/PermissonAspect.java:16::0 around on pre-initialization not supported (compiler limitation)
-error at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 applying to join point that doesn't return void: method-call(java.lang.String android.aspectjdemo.MPermisson.value())
-error at android/aspectjdemo/PermissonAspect.java:23::0 applying to join point that doesn't return void: method-call(java.lang.String android.aspectjdemo.MPermisson.value())
+error at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 applying to join point that doesn't return void: method-call(java.lang.String android.aspectjdemo.MPermission.value())
+error at android/aspectjdemo/PermissonAspect.java:23::0 applying to join point that doesn't return void: method-call(java.lang.String android.aspectjdemo.MPermission.value())
 error at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 applying to join point that doesn't return void: method-call(java.lang.Object org.aspectj.lang.ProceedingJoinPoint.getThis())
 error at android/aspectjdemo/PermissonAspect.java:26::0 applying to join point that doesn't return void: method-call(java.lang.Object org.aspectj.lang.ProceedingJoinPoint.getThis())
 error at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 applying to join point that doesn't return void: constructor-call(void android.support.v7.app.AlertDialog$Builder.<init>(android.content.Context))
@@ -427,25 +427,25 @@ error at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/
 error at android/aspectjdemo/PermissonAspect.java:28::0 applying to join point that doesn't return void: method-call(android.support.v7.app.AlertDialog$Builder android.support.v7.app.AlertDialog$Builder.setMessage(java.lang.CharSequence))
 error at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 applying to join point that doesn't return void: method-call(android.support.v7.app.AlertDialog$Builder android.support.v7.app.AlertDialog$Builder.setNegativeButton(java.lang.CharSequence, android.content.DialogInterface$OnClickListener))
 error at android/aspectjdemo/PermissonAspect.java:29::0 applying to join point that doesn't return void: method-call(android.support.v7.app.AlertDialog$Builder android.support.v7.app.AlertDialog$Builder.setNegativeButton(java.lang.CharSequence, android.content.DialogInterface$OnClickListener))
-error at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 applying to join point that doesn't return void: constructor-call(void android.aspectjdemo.PermissonAspect$1.<init>(android.aspectjdemo.PermissonAspect, org.aspectj.lang.ProceedingJoinPoint))
-error at android/aspectjdemo/PermissonAspect.java:29::0 applying to join point that doesn't return void: constructor-call(void android.aspectjdemo.PermissonAspect$1.<init>(android.aspectjdemo.PermissonAspect, org.aspectj.lang.ProceedingJoinPoint))
+error at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 applying to join point that doesn't return void: constructor-call(void android.aspectjdemo.PermissionAspect$1.<init>(android.aspectjdemo.PermissionAspect, org.aspectj.lang.ProceedingJoinPoint))
+error at android/aspectjdemo/PermissonAspect.java:29::0 applying to join point that doesn't return void: constructor-call(void android.aspectjdemo.PermissionAspect$1.<init>(android.aspectjdemo.PermissionAspect, org.aspectj.lang.ProceedingJoinPoint))
 error at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 applying to join point that doesn't return void: method-call(android.support.v7.app.AlertDialog$Builder android.support.v7.app.AlertDialog$Builder.setPositiveButton(java.lang.CharSequence, android.content.DialogInterface$OnClickListener))
 error at android/aspectjdemo/PermissonAspect.java:30::0 applying to join point that doesn't return void: method-call(android.support.v7.app.AlertDialog$Builder android.support.v7.app.AlertDialog$Builder.setPositiveButton(java.lang.CharSequence, android.content.DialogInterface$OnClickListener))
 error at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 applying to join point that doesn't return void: method-call(android.support.v7.app.AlertDialog android.support.v7.app.AlertDialog$Builder.create())
 error at android/aspectjdemo/PermissonAspect.java:41::0 applying to join point that doesn't return void: method-call(android.support.v7.app.AlertDialog android.support.v7.app.AlertDialog$Builder.create())
-weaveinfo Join point 'constructor-execution(void android.aspectjdemo.PermissonAspect.<init>())' in Type 'android.aspectjdemo.PermissonAspect' (PermissonAspect.java:16) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
-weaveinfo Join point 'method-execution(void android.aspectjdemo.PermissonAspect.methodAnnotatedWithMPermisson(android.aspectjdemo.MPermisson))' in Type 'android.aspectjdemo.PermissonAspect' (PermissonAspect.java:18) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
-weaveinfo Join point 'method-call(void android.support.v7.app.AlertDialog.show())' in Type 'android.aspectjdemo.PermissonAspect' (PermissonAspect.java:41) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
-weaveinfo Join point 'adviceexecution(void android.aspectjdemo.PermissonAspect.checkPermisson(org.aspectj.lang.ProceedingJoinPoint, android.aspectjdemo.MPermisson))' in Type 'android.aspectjdemo.PermissonAspect' (PermissonAspect.java:23) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
-weaveinfo Join point 'adviceexecution(void android.aspectjdemo.PermissonAspect.checkPermisson(org.aspectj.lang.ProceedingJoinPoint, android.aspectjdemo.MPermisson))' in Type 'android.aspectjdemo.PermissonAspect' (PermissonAspect.java:23) advised by around advice from 'android.aspectjdemo.others.AdviceExecutionAspect' (AdviceExecutionAspect.class(from AdviceExecutionAspect.java))
-weaveinfo Join point 'staticinitialization(void android.aspectjdemo.PermissonAspect.<clinit>())' in Type 'android.aspectjdemo.PermissonAspect' (PermissonAspect.java) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
-info woven aspect android.aspectjdemo.PermissonAspect (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect.class)
-info woven aspect android.aspectjdemo.PermissonAspect$AjcClosure1 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect.class)
-info woven aspect android.aspectjdemo.PermissonAspect$AjcClosure3 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect.class)
-info woven aspect android.aspectjdemo.PermissonAspect$AjcClosure5 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect.class)
-info woven aspect android.aspectjdemo.PermissonAspect$AjcClosure7 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect.class)
-info woven aspect android.aspectjdemo.PermissonAspect$AjcClosure9 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect.class)
-info woven aspect android.aspectjdemo.PermissonAspect$AjcClosure11 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect.class)
+weaveinfo Join point 'constructor-execution(void android.aspectjdemo.PermissionAspect.<init>())' in Type 'android.aspectjdemo.PermissionAspect' (PermissonAspect.java:16) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
+weaveinfo Join point 'method-execution(void android.aspectjdemo.PermissionAspect.methodAnnotatedWithMPermisson(android.aspectjdemo.MPermission))' in Type 'android.aspectjdemo.PermissionAspect' (PermissonAspect.java:18) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
+weaveinfo Join point 'method-call(void android.support.v7.app.AlertDialog.show())' in Type 'android.aspectjdemo.PermissionAspect' (PermissonAspect.java:41) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
+weaveinfo Join point 'adviceexecution(void android.aspectjdemo.PermissionAspect.checkPermisson(org.aspectj.lang.ProceedingJoinPoint, android.aspectjdemo.MPermission))' in Type 'android.aspectjdemo.PermissionAspect' (PermissonAspect.java:23) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
+weaveinfo Join point 'adviceexecution(void android.aspectjdemo.PermissionAspect.checkPermisson(org.aspectj.lang.ProceedingJoinPoint, android.aspectjdemo.MPermission))' in Type 'android.aspectjdemo.PermissionAspect' (PermissonAspect.java:23) advised by around advice from 'android.aspectjdemo.others.AdviceExecutionAspect' (AdviceExecutionAspect.class(from AdviceExecutionAspect.java))
+weaveinfo Join point 'staticinitialization(void android.aspectjdemo.PermissionAspect.<clinit>())' in Type 'android.aspectjdemo.PermissionAspect' (PermissonAspect.java) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
+info woven aspect android.aspectjdemo.PermissionAspect (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect.class)
+info woven aspect android.aspectjdemo.PermissionAspect$AjcClosure1 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect.class)
+info woven aspect android.aspectjdemo.PermissionAspect$AjcClosure3 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect.class)
+info woven aspect android.aspectjdemo.PermissionAspect$AjcClosure5 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect.class)
+info woven aspect android.aspectjdemo.PermissionAspect$AjcClosure7 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect.class)
+info woven aspect android.aspectjdemo.PermissionAspect$AjcClosure9 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect.class)
+info woven aspect android.aspectjdemo.PermissionAspect$AjcClosure11 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect.class)
 warning at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 around on initialization not supported (compiler limitation)
 warning at android/aspectjdemo/R.java:23::0 around on initialization not supported (compiler limitation)
 warning at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 around on pre-initialization not supported (compiler limitation)
@@ -687,7 +687,7 @@ weaveinfo Join point 'method-call(void android.aspectjdemo.MainActivity.startAct
 weaveinfo Join point 'method-call(void android.aspectjdemo.MainActivity.startActivity(android.content.Intent))' in Type 'android.aspectjdemo.MainActivity' (MainActivity.java:33) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
 weaveinfo Join point 'method-execution(void android.aspectjdemo.MainActivity.onViewClick(android.view.View))' in Type 'android.aspectjdemo.MainActivity' (MainActivity.java:25) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
 weaveinfo Join point 'method-call(void android.aspectjdemo.MainActivity.startActivity(android.content.Intent))' in Type 'android.aspectjdemo.MainActivity' (MainActivity.java:42) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
-weaveinfo Join point 'method-execution(void android.aspectjdemo.MainActivity.camera())' in Type 'android.aspectjdemo.MainActivity' (MainActivity.java:40) advised by around advice from 'android.aspectjdemo.PermissonAspect' (PermissonAspect.class(from PermissonAspect.java))
+weaveinfo Join point 'method-execution(void android.aspectjdemo.MainActivity.camera())' in Type 'android.aspectjdemo.MainActivity' (MainActivity.java:40) advised by around advice from 'android.aspectjdemo.PermissionAspect' (PermissonAspect.class(from PermissonAspect.java))
 weaveinfo Join point 'method-execution(void android.aspectjdemo.MainActivity.camera())' in Type 'android.aspectjdemo.MainActivity' (MainActivity.java:40) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
 weaveinfo Join point 'staticinitialization(void android.aspectjdemo.MainActivity.<clinit>())' in Type 'android.aspectjdemo.MainActivity' (MainActivity.java) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
 info woven class android.aspectjdemo.MainActivity (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/MainActivity.class)
@@ -902,18 +902,18 @@ warning at android/aspectjdemo/PermissonAspect.java:1::0 around on pre-initializ
 error at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 applying to join point that doesn't return void: field-get(java.lang.Object[] org.aspectj.runtime.internal.AroundClosure.state)
 error at android/aspectjdemo/PermissonAspect.java:1::0 applying to join point that doesn't return void: field-get(java.lang.Object[] org.aspectj.runtime.internal.AroundClosure.state)
 abort trouble in: 
-public class android.aspectjdemo.PermissonAspect$AjcClosure1 extends org.aspectj.runtime.internal.AroundClosure:
+public class android.aspectjdemo.PermissionAspect$AjcClosure1 extends org.aspectj.runtime.internal.AroundClosure:
   public void <init>(Object[]):
                     ALOAD_0   (line 1)
                     ALOAD_1
                     INVOKESPECIAL org.aspectj.runtime.internal.AroundClosure.<init> ([Ljava/lang/Object;)V
-    constructor-execution(void android.aspectjdemo.PermissonAspect$AjcClosure1.<init>(java.lang.Object[]))
+    constructor-execution(void android.aspectjdemo.PermissionAspect$AjcClosure1.<init>(java.lang.Object[]))
     |               RETURN
-    constructor-execution(void android.aspectjdemo.PermissonAspect$AjcClosure1.<init>(java.lang.Object[]))
+    constructor-execution(void android.aspectjdemo.PermissionAspect$AjcClosure1.<init>(java.lang.Object[]))
   end public void <init>(Object[])
 
   public Object run(Object[]):
-    method-execution(java.lang.Object android.aspectjdemo.PermissonAspect$AjcClosure1.run(java.lang.Object[]))
+    method-execution(java.lang.Object android.aspectjdemo.PermissionAspect$AjcClosure1.run(java.lang.Object[]))
     |               ALOAD_0     // Landroid/aspectjdemo/PermissonAspect$AjcClosure1; this   (line 1)
     | field-get(java.lang.Object[] org.aspectj.runtime.internal.AroundClosure.state)
     | |             GETFIELD org.aspectj.runtime.internal.AroundClosure.state [Ljava/lang/Object;
@@ -922,7 +922,7 @@ public class android.aspectjdemo.PermissonAspect$AjcClosure1 extends org.aspectj
     |               ALOAD_2
     |               ICONST_0
     |               AALOAD
-    |               CHECKCAST android.aspectjdemo.PermissonAspect
+    |               CHECKCAST android.aspectjdemo.PermissionAspect
     |               ALOAD_2
     |               ICONST_1
     |               AALOAD
@@ -930,20 +930,20 @@ public class android.aspectjdemo.PermissonAspect$AjcClosure1 extends org.aspectj
     |               ALOAD_2
     |               ICONST_2
     |               AALOAD
-    |               CHECKCAST android.aspectjdemo.MPermisson
+    |               CHECKCAST android.aspectjdemo.MPermission
     |               ALOAD_2
     |               ICONST_3
     |               AALOAD
     |               CHECKCAST org.aspectj.lang.JoinPoint
-    | method-call(void android.aspectjdemo.PermissonAspect.checkPermisson_aroundBody0(android.aspectjdemo.PermissonAspect, org.aspectj.lang.ProceedingJoinPoint, android.aspectjdemo.MPermisson, org.aspectj.lang.JoinPoint))
-    | |             INVOKESTATIC android.aspectjdemo.PermissonAspect.checkPermisson_aroundBody0 (Landroid/aspectjdemo/PermissonAspect;Lorg/aspectj/lang/ProceedingJoinPoint;Landroid/aspectjdemo/MPermisson;Lorg/aspectj/lang/JoinPoint;)V
-    | method-call(void android.aspectjdemo.PermissonAspect.checkPermisson_aroundBody0(android.aspectjdemo.PermissonAspect, org.aspectj.lang.ProceedingJoinPoint, android.aspectjdemo.MPermisson, org.aspectj.lang.JoinPoint))
+    | method-call(void android.aspectjdemo.PermissionAspect.checkPermisson_aroundBody0(android.aspectjdemo.PermissionAspect, org.aspectj.lang.ProceedingJoinPoint, android.aspectjdemo.MPermission, org.aspectj.lang.JoinPoint))
+    | |             INVOKESTATIC android.aspectjdemo.PermissionAspect.checkPermisson_aroundBody0 (Landroid/aspectjdemo/PermissonAspect;Lorg/aspectj/lang/ProceedingJoinPoint;Landroid/aspectjdemo/MPermisson;Lorg/aspectj/lang/JoinPoint;)V
+    | method-call(void android.aspectjdemo.PermissionAspect.checkPermisson_aroundBody0(android.aspectjdemo.PermissionAspect, org.aspectj.lang.ProceedingJoinPoint, android.aspectjdemo.MPermission, org.aspectj.lang.JoinPoint))
     |               ACONST_NULL
     |               ARETURN
-    method-execution(java.lang.Object android.aspectjdemo.PermissonAspect$AjcClosure1.run(java.lang.Object[]))
+    method-execution(java.lang.Object android.aspectjdemo.PermissionAspect$AjcClosure1.run(java.lang.Object[]))
   end public Object run(Object[])
 
-end public class android.aspectjdemo.PermissonAspect$AjcClosure1
+end public class android.aspectjdemo.PermissionAspect$AjcClosure1
  -- (NullPointerException) null
 null
 java.lang.NullPointerException
@@ -1060,7 +1060,7 @@ java.lang.NullPointerException
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
 
-info woven class android.aspectjdemo.PermissonAspect$AjcClosure1 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect$AjcClosure1.class)
+info woven class android.aspectjdemo.PermissionAspect$AjcClosure1 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect$AjcClosure1.class)
 warning at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 around on initialization not supported (compiler limitation)
 warning at android/aspectjdemo/R.java:2014::0 around on initialization not supported (compiler limitation)
 warning at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 around on pre-initialization not supported (compiler limitation)
@@ -1795,9 +1795,9 @@ java.lang.NullPointerException
 	at java.lang.Thread.run(Thread.java:745)
 
 info woven class android.aspectjdemo.method.MethodAspect$AjcClosure3 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/method/MethodAspect$AjcClosure3.class)
-error at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 around on staticinitialization of interface 'android.aspectjdemo.MPermisson' not supported (compiler limitation)
-error at android/aspectjdemo/MPermisson.java::0 around on staticinitialization of interface 'android.aspectjdemo.MPermisson' not supported (compiler limitation)
-info woven class android.aspectjdemo.MPermisson (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/MPermisson.class)
+error at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 around on staticinitialization of interface 'android.aspectjdemo.MPermission' not supported (compiler limitation)
+error at android/aspectjdemo/MPermisson.java::0 around on staticinitialization of interface 'android.aspectjdemo.MPermission' not supported (compiler limitation)
+info woven class android.aspectjdemo.MPermission (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/MPermisson.class)
 warning at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 around on initialization not supported (compiler limitation)
 warning at android/aspectjdemo/R.java:1744::0 around on initialization not supported (compiler limitation)
 warning at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 around on pre-initialization not supported (compiler limitation)
@@ -2425,15 +2425,15 @@ error at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/
 error at android/aspectjdemo/PermissonAspect.java:35::0 applying to join point that doesn't return void: method-call(java.lang.Object org.aspectj.lang.ProceedingJoinPoint.proceed())
 warning at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 Only before advice is supported on handler join points (compiler limitation)
 warning at android/aspectjdemo/PermissonAspect.java:36::0 Only before advice is supported on handler join points (compiler limitation)
-weaveinfo Join point 'constructor-execution(void android.aspectjdemo.PermissonAspect$1.<init>(android.aspectjdemo.PermissonAspect, org.aspectj.lang.ProceedingJoinPoint))' in Type 'android.aspectjdemo.PermissonAspect$1' (PermissonAspect.java:30) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
-weaveinfo Join point 'method-call(void java.lang.Throwable.printStackTrace())' in Type 'android.aspectjdemo.PermissonAspect$1' (PermissonAspect.java:37) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
-weaveinfo Join point 'method-execution(void android.aspectjdemo.PermissonAspect$1.onClick(android.content.DialogInterface, int))' in Type 'android.aspectjdemo.PermissonAspect$1' (PermissonAspect.java:35) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
-weaveinfo Join point 'staticinitialization(void android.aspectjdemo.PermissonAspect$1.<clinit>())' in Type 'android.aspectjdemo.PermissonAspect$1' (PermissonAspect.java) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
-info woven class android.aspectjdemo.PermissonAspect$1 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect$1.class)
-info woven class android.aspectjdemo.PermissonAspect$1$AjcClosure1 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect$1.class)
-info woven class android.aspectjdemo.PermissonAspect$1$AjcClosure3 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect$1.class)
-info woven class android.aspectjdemo.PermissonAspect$1$AjcClosure5 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect$1.class)
-info woven class android.aspectjdemo.PermissonAspect$1$AjcClosure7 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect$1.class)
+weaveinfo Join point 'constructor-execution(void android.aspectjdemo.PermissionAspect$1.<init>(android.aspectjdemo.PermissionAspect, org.aspectj.lang.ProceedingJoinPoint))' in Type 'android.aspectjdemo.PermissionAspect$1' (PermissonAspect.java:30) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
+weaveinfo Join point 'method-call(void java.lang.Throwable.printStackTrace())' in Type 'android.aspectjdemo.PermissionAspect$1' (PermissonAspect.java:37) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
+weaveinfo Join point 'method-execution(void android.aspectjdemo.PermissionAspect$1.onClick(android.content.DialogInterface, int))' in Type 'android.aspectjdemo.PermissionAspect$1' (PermissonAspect.java:35) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
+weaveinfo Join point 'staticinitialization(void android.aspectjdemo.PermissionAspect$1.<clinit>())' in Type 'android.aspectjdemo.PermissionAspect$1' (PermissonAspect.java) advised by around advice from 'android.aspectjdemo.field.FieldAspect' (FieldAspect.class(from FieldAspect.java))
+info woven class android.aspectjdemo.PermissionAspect$1 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect$1.class)
+info woven class android.aspectjdemo.PermissionAspect$1$AjcClosure1 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect$1.class)
+info woven class android.aspectjdemo.PermissionAspect$1$AjcClosure3 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect$1.class)
+info woven class android.aspectjdemo.PermissionAspect$1$AjcClosure5 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect$1.class)
+info woven class android.aspectjdemo.PermissionAspect$1$AjcClosure7 (from /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug/android/aspectjdemo/PermissonAspect$1.class)
 warning at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 around on initialization not supported (compiler limitation)
 warning at android/support/v7/appcompat/R.java:259::0 around on initialization not supported (compiler limitation)
 warning at /Users/hiphonezhu/Desktop/D/workspace-me/Android-Demos/AspectJDemo/app/build/intermediates/classes/debug!android/aspectjdemo/field/FieldAspect.class::0 around on pre-initialization not supported (compiler limitation)

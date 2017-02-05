@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @MPermisson(value = Manifest.permission.CAMERA)
+    @MPermission(value = Manifest.permission.CAMERA)
     public void camera() {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(getExternalCacheDir() + "photo.jpg")));
