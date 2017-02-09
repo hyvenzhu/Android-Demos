@@ -10,15 +10,16 @@
             android:id="@+id/collapsingToolbarLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:contentScrim="@color/colorPrimary"
             app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 app:layout_collapseMode="pin"
+                android:minHeight="10dp"
                 android:background="@color/colorPrimary"/>
         </android.support.design.widget.CollapsingToolbarLayout>
-
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.NestedScrollView

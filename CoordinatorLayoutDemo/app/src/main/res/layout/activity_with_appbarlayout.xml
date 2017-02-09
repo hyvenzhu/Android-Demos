@@ -6,12 +6,19 @@
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            app:layout_scrollFlags="scroll|enterAlways"
-            android:background="@color/colorPrimary"/>
+            android:text="标题"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimary"
+            android:minHeight="10dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"/>
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.NestedScrollView

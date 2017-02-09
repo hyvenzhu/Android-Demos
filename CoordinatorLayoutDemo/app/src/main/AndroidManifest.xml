@@ -17,7 +17,7 @@
         </activity>
         <activity android:name=".WithFloatingActionButton"/>
         <activity android:name=".WithCollapsingToolbar"/>
-        <activity android:name=".WithToolBar"/>
+        <activity android:name=".WithAppBarLayout"/>
         <activity android:name=".WithCustomBehavior"/>
     </application>
 

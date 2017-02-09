@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:onClick="intentTo"
-        android:text="ToolBar" />
+        android:text="AppBarLayout" />
     <Button
         android:id="@+id/btn3"
         android:layout_width="wrap_content"

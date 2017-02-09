@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, WithFloatingActionButton.class));
                 break;
             case R.id.btn2:
-                startActivity(new Intent(this, WithToolBar.class));
+                startActivity(new Intent(this, WithAppBarLayout.class));
                 break;
             case R.id.btn3:
                 startActivity(new Intent(this, WithCollapsingToolbar.class));
