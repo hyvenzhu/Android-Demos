@@ -2,7 +2,7 @@ package com.example.hiphonezhu.immersivedemo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
+import android.support.v7.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -10,6 +10,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
+        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+
+        // 以下两个方法都是 OK 的
+//        new KeyboardUtil(this, findViewById(android.R.id.content)).enable();
+        AndroidBug5497Workaround.assistActivity(findViewById(android.R.id.content));
     }
 }
