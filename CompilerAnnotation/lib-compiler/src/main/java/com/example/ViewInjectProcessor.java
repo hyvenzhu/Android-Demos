@@ -42,6 +42,7 @@ public class ViewInjectProcessor extends AbstractProcessor {
 
     private Filer filer;
     Elements elementUtils;
+
     @Override
     public synchronized void init(ProcessingEnvironment processingEnvironment) {
         super.init(processingEnvironment);
@@ -51,16 +52,22 @@ public class ViewInjectProcessor extends AbstractProcessor {
 
     @Override
     public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnvironment) {
+        collectInfo(roundEnvironment);
+        writeToFile();
+        return true;
+    }
+
+    void collectInfo(RoundEnvironment roundEnvironment) {
         classMap.clear();
         classTypeElement.clear();
 
         Set<? extends Element> elements = roundEnvironment.getElementsAnnotatedWith(BindView.class);
-        for(Element element : elements) {
+        for (Element element : elements) {
             // 获取 BindView 注解的值
             int viewId = element.getAnnotation(BindView.class).value();
 
             // 代表被注解的元素
-            VariableElement variableElement = (VariableElement)element;
+            VariableElement variableElement = (VariableElement) element;
 
             // 备注解元素所在的Class
             TypeElement typeElement = (TypeElement) variableElement.getEnclosingElement();
@@ -73,7 +80,7 @@ public class ViewInjectProcessor extends AbstractProcessor {
                 variableList = new ArrayList<>();
                 classMap.put(classFullName, variableList);
 
-                // 保存Class对应要素（名称、完成路径等）
+                // 保存Class对应要素（名称、完整路径等）
                 classTypeElement.put(classFullName, typeElement);
             }
             VariableInfo variableInfo = new VariableInfo();
@@ -81,9 +88,11 @@ public class ViewInjectProcessor extends AbstractProcessor {
             variableInfo.setViewId(viewId);
             variableList.add(variableInfo);
         }
+    }
 
+    void writeToFile() {
         try {
-            for(String classFullName : classMap.keySet()) {
+            for (String classFullName : classMap.keySet()) {
                 TypeElement typeElement = classTypeElement.get(classFullName);
 
                 // 使用构造函数绑定数据
@@ -91,7 +100,7 @@ public class ViewInjectProcessor extends AbstractProcessor {
                         .addModifiers(Modifier.PUBLIC)
                         .addParameter(ParameterSpec.builder(TypeName.get(typeElement.asType()), "activity").build());
                 List<VariableInfo> variableList = classMap.get(classFullName);
-                for(VariableInfo variableInfo : variableList) {
+                for (VariableInfo variableInfo : variableList) {
                     VariableElement variableElement = variableInfo.getVariableElement();
                     // 变量名称(比如：TextView tv 的 tv)
                     String variableName = variableElement.getSimpleName().toString();
@@ -117,6 +126,5 @@ public class ViewInjectProcessor extends AbstractProcessor {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        return true;
     }
 }
